@@ -1,0 +1,162 @@
+*PPD-Adobe: "4.3"
+*%
+*% Evolis Avansia - unofficial macOS CUPS driver
+*% Base strings English (ASCII), German translations (UTF-8) below.
+*% SPDX-License-Identifier: MIT
+*%
+*FormatVersion: "4.3"
+*FileVersion: "0.1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "AVANSIA.PPD"
+*Manufacturer: "Evolis"
+*Product: "(Avansia)"
+*ModelName: "Evolis Avansia"
+*ShortNickName: "Evolis Avansia"
+*NickName: "Evolis Avansia (inoffiziell, CUPS)"
+*1284DeviceID: "MFG:Evolis;MDL:Avansia;CMD:AVANSIA;"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*FileSystem: False
+*Throughput: "2"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*cupsVersion: 2.3
+*cupsModelNumber: 0
+*cupsManualCopies: True
+*cupsBackSide: Normal
+*cupsLanguages: "de"
+*cupsFilter2: "application/vnd.cups-raster application/vnd.evolis-avansia 100 /Library/Printers/Evolis/Avansia/Filter/rastertoavansia"
+
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 600dpi
+*Resolution 600dpi/600 dpi: "<</HWResolution[600 600]/cupsBitsPerColor 8/cupsColorOrder 0/cupsColorSpace 1>>setpagedevice"
+*CloseUI: *Resolution
+
+*OpenUI *ColorModel/Color Mode: PickOne
+*OrderDependency: 10 AnySetup *ColorModel
+*DefaultColorModel: RGB
+*ColorModel RGB/Color: "<</cupsColorOrder 0/cupsColorSpace 1/cupsBitsPerColor 8>>setpagedevice"
+*CloseUI: *ColorModel
+
+*% CR80 = 85.60 x 53.98 mm. The Avansia prints edge to edge; the filter
+*% extends the edge pixels into the bleed area (2048 x 1300 px @ 600 dpi).
+*OpenUI *PageSize/Card Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: CR80
+*PageSize CR80/CR80 Landscape (85.6 x 54 mm): "<</PageSize[242.65 153.01]/ImagingBBox null>>setpagedevice"
+*PageSize CR80Portrait/CR80 Portrait (54 x 85.6 mm): "<</PageSize[153.01 242.65]/ImagingBBox null>>setpagedevice"
+*PageSize CR80Bleed/CR80 Landscape with Bleed (86.7 x 55 mm): "<</PageSize[245.76 156]/ImagingBBox null>>setpagedevice"
+*PageSize CR80BleedPortrait/CR80 Portrait with Bleed (55 x 86.7 mm): "<</PageSize[156 245.76]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion/Card Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: CR80
+*PageRegion CR80/CR80 Landscape (85.6 x 54 mm): "<</PageSize[242.65 153.01]/ImagingBBox null>>setpagedevice"
+*PageRegion CR80Portrait/CR80 Portrait (54 x 85.6 mm): "<</PageSize[153.01 242.65]/ImagingBBox null>>setpagedevice"
+*PageRegion CR80Bleed/CR80 Landscape with Bleed (86.7 x 55 mm): "<</PageSize[245.76 156]/ImagingBBox null>>setpagedevice"
+*PageRegion CR80BleedPortrait/CR80 Portrait with Bleed (55 x 86.7 mm): "<</PageSize[156 245.76]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: CR80
+*ImageableArea CR80: "0 0 242.65 153.01"
+*ImageableArea CR80Portrait: "0 0 153.01 242.65"
+*ImageableArea CR80Bleed: "0 0 245.76 156"
+*ImageableArea CR80BleedPortrait: "0 0 156 245.76"
+
+*DefaultPaperDimension: CR80
+*PaperDimension CR80: "242.65 153.01"
+*PaperDimension CR80Portrait: "153.01 242.65"
+*PaperDimension CR80Bleed: "245.76 156"
+*PaperDimension CR80BleedPortrait: "156 245.76"
+
+*OpenUI *Duplex/2-Sided Printing: PickOne
+*OrderDependency: 20 AnySetup *Duplex
+*DefaultDuplex: None
+*Duplex None/Off: "<</Duplex false>>setpagedevice"
+*Duplex DuplexNoTumble/Long-Edge (flip portrait card sideways): "<</Duplex true/Tumble false>>setpagedevice"
+*Duplex DuplexTumble/Short-Edge (flip landscape card sideways): "<</Duplex true/Tumble true>>setpagedevice"
+*CloseUI: *Duplex
+
+*OpenGroup: Avansia/Avansia
+
+*OpenUI *AvansiaRibbon/Ribbon: PickOne
+*OrderDependency: 30 AnySetup *AvansiaRibbon
+*DefaultAvansiaRibbon: YMCK
+*AvansiaRibbon YMCK/YMCK: ""
+*AvansiaRibbon YMCKK/YMCKK: ""
+*CloseUI: *AvansiaRibbon
+
+*OpenUI *AvansiaBlack/Black Panel: PickOne
+*OrderDependency: 30 AnySetup *AvansiaBlack
+*DefaultAvansiaBlack: ALLBLACKPOINT
+*AvansiaBlack ALLBLACKPOINT/Black pixels on K panel: ""
+*AvansiaBlack NOBLACKPOINT/Composite black (YMC): ""
+*CloseUI: *AvansiaBlack
+
+*OpenUI *AvansiaSkipBlankBack/Skip blank back side: Boolean
+*OrderDependency: 30 AnySetup *AvansiaSkipBlankBack
+*DefaultAvansiaSkipBlankBack: True
+*AvansiaSkipBlankBack True/Yes: ""
+*AvansiaSkipBlankBack False/No: ""
+*CloseUI: *AvansiaSkipBlankBack
+
+*OpenUI *AvansiaFrontRotate/Rotate front side 180 degrees: Boolean
+*OrderDependency: 30 AnySetup *AvansiaFrontRotate
+*DefaultAvansiaFrontRotate: False
+*AvansiaFrontRotate True/Yes: ""
+*AvansiaFrontRotate False/No: ""
+*CloseUI: *AvansiaFrontRotate
+
+*OpenUI *AvansiaBackRotate/Rotate back side additional 180 degrees: Boolean
+*OrderDependency: 30 AnySetup *AvansiaBackRotate
+*DefaultAvansiaBackRotate: False
+*AvansiaBackRotate True/Yes: ""
+*AvansiaBackRotate False/No: ""
+*CloseUI: *AvansiaBackRotate
+
+*CloseGroup: Avansia
+
+*% ---- Deutsch ------------------------------------------------------------
+*de.Translation Resolution/Auflösung: ""
+*de.Resolution 600dpi/600 dpi: ""
+*de.Translation ColorModel/Farbmodus: ""
+*de.ColorModel RGB/Farbe: ""
+*de.Translation PageSize/Kartenformat: ""
+*de.PageSize CR80/CR80 Querformat (85,6 × 54 mm): ""
+*de.PageSize CR80Portrait/CR80 Hochformat (54 × 85,6 mm): ""
+*de.PageSize CR80Bleed/CR80 Querformat mit Beschnitt (86,7 × 55 mm): ""
+*de.PageSize CR80BleedPortrait/CR80 Hochformat mit Beschnitt (55 × 86,7 mm): ""
+*de.Translation PageRegion/Kartenformat: ""
+*de.PageRegion CR80/CR80 Querformat (85,6 × 54 mm): ""
+*de.PageRegion CR80Portrait/CR80 Hochformat (54 × 85,6 mm): ""
+*de.PageRegion CR80Bleed/CR80 Querformat mit Beschnitt (86,7 × 55 mm): ""
+*de.PageRegion CR80BleedPortrait/CR80 Hochformat mit Beschnitt (55 × 86,7 mm): ""
+*de.Translation Duplex/Beidseitig drucken: ""
+*de.Duplex None/Aus (einseitig): ""
+*de.Duplex DuplexNoTumble/Lange Kante (Hochformat seitlich wenden): ""
+*de.Duplex DuplexTumble/Kurze Kante (Querformat seitlich wenden): ""
+*de.Translation Avansia/Avansia: ""
+*de.Translation AvansiaRibbon/Farbband: ""
+*de.AvansiaRibbon YMCK/YMCK (Farbe + Schwarz): ""
+*de.AvansiaRibbon YMCKK/YMCKK (Farbe + 2 × Schwarz): ""
+*de.Translation AvansiaBlack/Schwarz (K-Panel): ""
+*de.AvansiaBlack ALLBLACKPOINT/Schwarze Pixel mit K-Panel (scharfer Text): ""
+*de.AvansiaBlack NOBLACKPOINT/Schwarz aus YMC mischen: ""
+*de.Translation AvansiaSkipBlankBack/Leere Rückseite nicht drucken: ""
+*de.AvansiaSkipBlankBack True/Ja: ""
+*de.AvansiaSkipBlankBack False/Nein: ""
+*de.Translation AvansiaFrontRotate/Vorderseite um 180° drehen: ""
+*de.AvansiaFrontRotate True/Ja: ""
+*de.AvansiaFrontRotate False/Nein: ""
+*de.Translation AvansiaBackRotate/Rückseite zusätzlich um 180° drehen: ""
+*de.AvansiaBackRotate True/Ja: ""
+*de.AvansiaBackRotate False/Nein: ""
+
+*DefaultFont: Courier
+*Font Courier: Standard "(1.05)" Standard ROM
+*% End

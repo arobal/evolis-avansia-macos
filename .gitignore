@@ -1,0 +1,17 @@
+# Build- und Testausgaben
+build/
+tests/out/
+*.dSYM/
+*.o
+
+# Eigene Kartenmotive und Drucke (nicht veroeffentlichen)
+beispiele/
+*.prn
+*.bmp
+
+# Evolis SDK wird bei der Installation geladen, nie einchecken
+*.whl
+libevolis.dylib
+
+# macOS
+.DS_Store
