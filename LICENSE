@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-Third-party notices:
-- libusb (LGPL-2.1) is statically linked into the "avansia" backend and
-  "avansiactl". Its source is available at https://libusb.info/. You may relink
-  the binaries against a modified libusb using the provided Makefile.
-- libevolis (Evolis SDK) is proprietary to Evolis and is NOT distributed with
-  this project; the installer downloads it from the official PyPI package.
-- The Avansia USB protocol details were adapted from
-  https://github.com/qianxueye/avansia-macos-driver (MIT License).

@@ -229,7 +229,9 @@ schlanker:
 
 ## Herkunft und Lizenz
 
-- Der eigene Code steht unter MIT-Lizenz (siehe `LICENSE`).
+- Der eigene Code steht unter MIT-Lizenz (siehe [LICENSE](LICENSE)). Hinweise zu
+  libusb, Evolis SDK und weiteren Quellen stehen in
+  [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 - `libevolis` gehört Evolis und wird nicht mitgeliefert. Es wird zur Installation
   aus dem öffentlichen PyPI-Paket `evolis-sdk` geladen.
 - Das USB-Protokoll (Rahmenformat, Quittungen, Statusbits, Kartenstart und
